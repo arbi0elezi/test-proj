@@ -21,6 +21,7 @@ console.log(obj2.obj.obj.obj.obj.obj);
 const mid = (req, res, next) => {
 	console.log('I am mid');
 	next();
+
 }
 
 
@@ -28,6 +29,7 @@ const mid = (req, res, next) => {
 
 const mid1 = (req, res, next) => {
 	console.log('I am mid 1');
+	console.log(req.query);	
 	res.send('Hello');
 	next();
 }
@@ -40,11 +42,13 @@ const mid2 = (req, res, next) => {
 
 const mid3 = (req, res, next) => {
 	console.log('I am mid 3');
-//	res.send('Howdy');
+//	console.log(res);
+	console.log(req.params);	
+//res.send('Howdy');
 	next();
 }
 
-app.get('/mid', [mid2, mid3, mid1])
+app.get('/mid/:id', [mid2, mid3, mid1])
 
 app.get('/', (req, res)=>{
 	res.send('hello!!');
