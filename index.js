@@ -1,4 +1,7 @@
+const express = require('express');
+const app = express();
 
+const testCircular = () => {
 let obj1 = {
     text: "I am obj1"
 };
@@ -13,10 +16,12 @@ obj2.obj = obj1;
 console.log(obj1);
 console.log(obj1.obj);
 console.log(obj2.obj.obj.obj.obj.obj);
+};
 
-// const newObj = JSON.stringify(obj);
 
-// console.log(newObj);
+app.get('/', (req, res)=>{
+	res.send('hello!!');
+});
 
-const string = JSON.stringify(obj1);
-console.log(string)
+
+app.listen(3131);
