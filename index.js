@@ -18,10 +18,36 @@ console.log(obj1.obj);
 console.log(obj2.obj.obj.obj.obj.obj);
 };
 
+const mid = (req, res, next) => {
+	console.log('I am mid');
+	next();
+}
+
+
+//app.use(mid);
+
+const mid1 = (req, res, next) => {
+	console.log('I am mid 1');
+	res.send('Hello');
+	next();
+}
+
+const mid2 = (req, res, next) => {
+	console.log('I am mid 2');
+//	res.send('World');
+	next();
+}
+
+const mid3 = (req, res, next) => {
+	console.log('I am mid 3');
+//	res.send('Howdy');
+	next();
+}
+
+app.get('/mid', [mid2, mid3, mid1])
 
 app.get('/', (req, res)=>{
 	res.send('hello!!');
 });
-
 
 app.listen(3131);
