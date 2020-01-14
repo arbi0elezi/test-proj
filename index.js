@@ -1,5 +1,7 @@
-const express = require('express');
-const app = express();
+//import express from 'express';
+const {generateToken, verifyToken} = require('./auth');
+
+//const app = express();
 
 const testCircular = () => {
 	let obj1 = {
@@ -48,12 +50,25 @@ const mid3 = (req, res, next) => {
 	next();
 }
 
-app.get('/mid/:id', [mid2, mid3, mid1])
+// app.get('/mid/:id', [mid2, mid3, mid1])
 
-app.get('/', (req, res) => {
-	res.send('hello!!');
-});
+// app.get('/', (req, res) => {
+// 	res.send('hello!!');
+// });
 
 
 
-app.listen(3131);
+// app.listen(3131);
+
+const cred = {
+	username: "user",
+	password: "Nga 1shi te 8ta!!"
+};
+
+const token = generateToken(cred);
+
+console.log('TOKEN ===>', token);
+
+const flag = verifyToken(token);
+
+console.log('IS VALID ===> ', flag);
