@@ -1,4 +1,4 @@
-const {generateToken, verifyToken} = require('./jwtFactory.js');
+const {generateToken, verifyToken} = require('./jwt-factory.js/index.js');
 
 module.exports = {
     generateToken,
