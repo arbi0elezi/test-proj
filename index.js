@@ -69,6 +69,7 @@ const token = generateToken(cred);
 
 console.log('TOKEN ===>', token);
 
+
 const flag = verifyToken(token);
 
 console.log('IS VALID ===> ', flag);
