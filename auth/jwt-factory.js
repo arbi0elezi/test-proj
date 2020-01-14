@@ -1,4 +1,4 @@
-const jwt =require( 'jsonwebtoken');
+import jwt from 'jsonwebtoken';
 
 const secret = 'z1234raefqwr3';
 
@@ -13,7 +13,7 @@ const verifyToken = token => {
     }
 }
 
-module.exports = {
+export {
     generateToken,
     verifyToken
 };

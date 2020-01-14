@@ -1,6 +1,6 @@
-const {generateToken, verifyToken} = require('./jwt-factory.js/index.js');
+import {generateToken, verifyToken} from './jwt-factory';
 
-module.exports = {
+export {
     generateToken,
     verifyToken
 };

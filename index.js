@@ -1,5 +1,5 @@
 //import express from 'express';
-const {generateToken, verifyToken} = require('./auth');
+import {generateToken, verifyToken} from './auth';
 
 //const app = express();
 
