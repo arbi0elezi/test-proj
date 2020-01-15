@@ -1,6 +1,6 @@
 import {generateToken, verifyToken} from './jwt-factory';
 
-export {
+export  {
     generateToken,
     verifyToken
 };
