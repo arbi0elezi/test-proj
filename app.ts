@@ -1,4 +1,5 @@
 import * as tokens from './auth';
+import initConn from './sql-database';
 
 import express from 'express';
 
@@ -72,6 +73,7 @@ console.log('TOKEN ===>', token);
 
 
 const flag = verifyToken(token);
+initConn();
 
 console.log('IS VALID ===> ', flag);
 console.log('TYPESCRIPT works!!! !!!!!')
