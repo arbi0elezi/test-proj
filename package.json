@@ -6,7 +6,7 @@
   "scripts": {
     "tsc": "tsc",
     "test": "test",
-    "start": "ts-node-dev --respawn --transpileOnly ./app.ts",
+    "start": "ts-node-dev --respawn ./app.ts",
     "dev": "ts-node-dev --respawn --transpileOnly ./app.ts"
   },
   "author": "",
