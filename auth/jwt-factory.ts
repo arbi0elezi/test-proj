@@ -10,7 +10,7 @@ const verifyToken = (token: any): boolean => {
         const options: any =  {
             expiresIn: '1h',
             algorithm: 'HS512'
-        }
+        };
 
         jwt.verify(token, secret, options);
         return true;

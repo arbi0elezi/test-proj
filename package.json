@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "tsc": "tsc",
-    "dev": "nodemon index.js --exec babel-node --presets babel-preset-env",
     "test": "test",
-    "start": "ts-node-dev --respawn --transpileOnly ./app.ts"
+    "start": "ts-node-dev --respawn --transpileOnly ./app.ts",
+    "dev": "ts-node-dev --respawn --transpileOnly ./app.ts"
   },
   "author": "",
   "license": "ISC",
