@@ -5,11 +5,11 @@ import {createConnection} from 'typeorm';
 export const initConn = (): void => {
     createConnection({
         type: "mysql",
-        host: "193.164.132.242",
+        host: "some host",
         port: 3306,
-        username: "remote_root",
-        password: "r35NaHCqWbF9e%",
-        database: "magusdb",
+        username: "some user",
+        password: "somepass",
+        database: "somechar",
         synchronize: true,
         logging: true
     }).then((): void => {
